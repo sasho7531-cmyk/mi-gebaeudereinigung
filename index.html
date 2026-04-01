@@ -3,64 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MI Gebäudereinigung | Premium Reinigungsservice</title>
+    <title>MI Gebäudereinigung | Premium Service Neuwied</title>
     <link href="https://googleapis.com" rel="stylesheet">
     <link rel="stylesheet" href="https://cloudflare.com">
     <style>
-        :root { --gold: #D4AF37; --black: #050505; --grey: #1a1a1a; }
+        :root { --gold: #D4AF37; --black: #080808; --dark-grey: #121212; --white: #ffffff; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Poppins', sans-serif; background: var(--black); color: white; scroll-behavior: smooth; }
-        
+        body { font-family: 'Poppins', sans-serif; background-color: var(--black); color: var(--white); line-height: 1.6; scroll-behavior: smooth; }
+
         /* NAVBAR */
         nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 8%; background: rgba(0,0,0,0.95); position: fixed; width: 100%; z-index: 1000; border-bottom: 1px solid var(--gold); }
-        .logo { font-family: 'Playfair Display', serif; color: var(--gold); font-size: 1.5rem; font-weight: 900; letter-spacing: 2px; }
+        .logo { font-family: 'Playfair Display', serif; color: var(--gold); font-size: 1.7rem; font-weight: 900; letter-spacing: 2px; }
         .nav-links { list-style: none; display: flex; }
         .nav-links li { margin-left: 30px; }
-        .nav-links a { color: white; text-decoration: none; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
+        .nav-links a { color: white; text-decoration: none; font-size: 0.85rem; text-transform: uppercase; transition: 0.3s; font-weight: 600; }
         .nav-links a:hover { color: var(--gold); }
 
-        /* HERO SECTION - FOTO GRANDE */
+        /* HERO SECTION */
         .hero { 
             height: 100vh; 
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
                         url('https://unsplash.com') center/cover no-repeat;
             display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 0 20px;
         }
+
+        /* DIAMANTE ANIMATO */
+        .diamond-wrap { margin-bottom: 30px; position: relative; }
         .diamond { 
-            width: 80px; height: 80px; background: var(--gold); margin-bottom: 30px;
+            width: 80px; height: 80px; background: var(--gold); 
             clip-path: polygon(50% 0%, 100% 35%, 80% 100%, 20% 100%, 0% 35%);
-            animation: rotate 5s infinite linear; box-shadow: 0 0 50px var(--gold);
+            animation: rotate 5s infinite linear, pulse 2s infinite alternate;
+            box-shadow: 0 0 50px var(--gold);
         }
         @keyframes rotate { from { transform: rotateY(0deg); } to { transform: rotateY(360deg); } }
-        
-        h1 { font-family: 'Playfair Display', serif; font-size: 4rem; color: var(--gold); line-height: 1.1; margin-bottom: 20px; }
-        .hero p { font-size: 1.2rem; max-width: 700px; margin-bottom: 40px; color: #ddd; }
-        .btn-wa { background: #25D366; color: white; padding: 20px 45px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.1rem; transition: 0.3s; display: flex; align-items: center; gap: 10px; }
-        .btn-wa:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(37,211,102,0.5); }
+        @keyframes pulse { from { filter: brightness(1); } to { filter: brightness(1.4); } }
 
-        /* SERVIZI CON FOTO */
-        .services { padding: 100px 8%; text-align: center; }
-        .section-title { font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--gold); margin-bottom: 60px; }
+        h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 8vw, 4.5rem); color: var(--gold); margin-bottom: 20px; text-transform: uppercase; }
+        .hero p { font-size: 1.3rem; max-width: 800px; margin-bottom: 40px; color: #eee; font-weight: 300; }
+
+        /* BOTTONE WHATSAPP */
+        .btn-whatsapp { 
+            background: #25D366; color: white; padding: 20px 45px; 
+            text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.2rem;
+            display: flex; align-items: center; gap: 15px; transition: 0.4s;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+        }
+        .btn-whatsapp:hover { transform: translateY(-5px); background: #1ebd57; box-shadow: 0 15px 30px rgba(37, 211, 102, 0.6); }
+
+        /* SERVIZI */
+        .services { padding: 120px 8%; background: var(--black); }
+        .section-title { text-align: center; font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--gold); margin-bottom: 70px; position: relative; }
+        .section-title::after { content: ''; width: 80px; height: 3px; background: var(--gold); position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); }
+        
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
-        .card { background: var(--grey); border: 1px solid #333; border-radius: 15px; overflow: hidden; transition: 0.4s; border-bottom: 4px solid var(--gold); }
-        .card-img { height: 220px; background-size: cover; background-position: center; }
-        .card-content { padding: 30px; }
-        .card h3 { color: var(--gold); margin-bottom: 15px; font-size: 1.5rem; }
-        .card p { color: #bbb; font-size: 0.95rem; }
+        .card { 
+            background: var(--dark-grey); border-radius: 20px; overflow: hidden; 
+            border: 1px solid #222; transition: 0.5s; border-bottom: 5px solid var(--gold);
+        }
         .card:hover { transform: translateY(-15px); border-color: var(--gold); }
+        .card-img { height: 240px; background-size: cover; background-position: center; filter: grayscale(30%); transition: 0.5s; }
+        .card:hover .card-img { filter: grayscale(0%); transform: scale(1.05); }
+        .card-body { padding: 35px; text-align: center; }
+        .card h3 { font-family: 'Playfair Display', serif; color: var(--gold); font-size: 1.6rem; margin-bottom: 15px; }
+        .card p { color: #bbb; font-size: 0.95rem; }
 
         /* CONTATTI */
-        .contact { padding: 100px 8%; background: var(--grey); text-align: center; border-top: 2px solid var(--gold); }
-        .contact-info { display: flex; flex-wrap: wrap; justify-content: center; gap: 50px; margin-top: 40px; }
-        .info-box i { font-size: 2.5rem; color: var(--gold); margin-bottom: 15px; display: block; }
-        .info-box span { display: block; font-size: 1.1rem; }
+        .contact { padding: 100px 8%; background: var(--dark-grey); text-align: center; border-top: 1px solid #222; }
+        .contact-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 60px; margin-top: 50px; }
+        .info-item i { font-size: 2.8rem; color: var(--gold); margin-bottom: 20px; display: block; }
+        .info-item h4 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--gold); margin-bottom: 5px; }
+        .info-item span { font-size: 1.1rem; color: #fff; }
 
-        footer { padding: 40px; text-align: center; background: #000; border-top: 1px solid #222; color: #555; }
+        footer { padding: 50px; text-align: center; background: #050505; color: #555; font-size: 0.9rem; border-top: 1px solid #111; }
     </style>
 </head>
 <body>
+
     <nav>
-        <div class="logo">MI GEBÄUDEREINIGUNG</div>
+        <div class="logo">MI <span>GEBÄUDEREINIGUNG</span></div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#services">Leistungen</a></li>
@@ -69,10 +89,12 @@
     </nav>
 
     <header id="home" class="hero">
-        <div class="diamond"></div>
-        <h1>REINIGUNG AUF <br><span style="color:white">HÖCHSTEM NIVEAU</span></h1>
-        <p>Ihr zertifizierter Meisterbetrieb für professionelle Gebäudereinigung in Neuwied und Umgebung. Glanz, Hygiene und Perfektion.</p>
-        <a href="https://wa.me" class="btn-wa"><i class="fab fa-whatsapp"></i> KOSTENLOSE ANFRAGE</a>
+        <div class="diamond-wrap"><div class="diamond"></div></div>
+        <h1>Premium Reinigung <br><span style="color:white; font-size:0.6em">auf höchstem Niveau</span></h1>
+        <p>Ihr zertifizierter Partner für gewerbliche und private Sauberkeit in Neuwied. Wir garantieren Werterhalt, Hygiene und absolute Zuverlässigkeit.</p>
+        <a href="https://wa.me" target="_blank" class="btn-whatsapp">
+            <i class="fab fa-whatsapp"></i> KOSTENLOSE ANFRAGE
+        </a>
     </header>
 
     <section id="services" class="services">
@@ -80,27 +102,41 @@
         <div class="grid">
             <div class="card">
                 <div class="card-img" style="background-image: url('https://unsplash.com');"></div>
-                <div class="card-content"><h3>Büroreinigung</h3><p>Tägliche Pflege für ein sauberes und motivierendes Arbeitsumfeld.</p></div>
+                <div class="card-body">
+                    <h3>Büroreinigung</h3>
+                    <p>Tägliche Unterhaltsreinigung für ein repräsentatives und hygienisches Arbeitsumfeld in Ihren Geschäftsräumen.</p>
+                </div>
             </div>
             <div class="card">
                 <div class="card-img" style="background-image: url('https://unsplash.com');"></div>
-                <div class="card-content"><h3>Glasreinigung</h3><p>Kristallklare Fenster und Glasfassaden ohne Streifen.</p></div>
+                <div class="card-body">
+                    <h3>Glasreinigung</h3>
+                    <p>Streifenfreie Sauberkeit für Fenster, Glasfassaden und Schaufenster durch unsere erfahrenen Fensterputzer.</p>
+                </div>
             </div>
             <div class="card">
                 <div class="card-img" style="background-image: url('https://unsplash.com');"></div>
-                <div class="card-content"><h3>Baureinigung</h3><p>Fachgerechte Endreinigung nach Neubau oder Sanierung.</p></div>
+                <div class="card-body">
+                    <h3>Baureinigung</h3>
+                    <p>Fachgerechte Baufeinreinigung nach Neubau oder Sanierung. Wir machen Ihr Objekt bezugsfertig e glänzend.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer id="contact" class="contact">
+    <section id="contact" class="contact">
         <h2 class="section-title">Kontakt & Impressum</h2>
-        <div class="contact-info">
-            <div class="info-box"><i class="fas fa-user"></i><span>Inhaber: Ismet Berisa</span></div>
-            <div class="info-box"><i class="fas fa-phone"></i><span>0176 63737254</span></div>
-            <div class="info-box"><i class="fas fa-envelope"></i><span>info@experts-on-cleaning.de</span></div>
-            <div class="info-box"><i class="fas fa-map-marker-alt"></i><span>Rheinstraße 133, 56564 Neuwied</span></div>
+        <div class="contact-grid">
+            <div class="info-item"><i class="fas fa-user-tie"></i><h4>Inhaber</h4><span>Ismet Berisa</span></div>
+            <div class="info-item"><i class="fas fa-phone-alt"></i><h4>Telefon</h4><span>0176 63737254</span></div>
+            <div class="info-item"><i class="fas fa-envelope"></i><h4>Email</h4><span>info@experts-on-cleaning.de</span></div>
+            <div class="info-item"><i class="fas fa-map-marker-alt"></i><h4>Adresse</h4><span>Rheinstraße 133, 56564 Neuwied</span></div>
         </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 MI GEBÄUDEREINIGUNG - Premium Cleaning Services in Neuwied</p>
     </footer>
+
 </body>
 </html>
