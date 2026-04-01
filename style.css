@@ -1,31 +1,18 @@
-:root { --primary: #D4AF37; --accent: #000000; --dark: #0a0a0a; --text: #f4f4f4; --white: #fff; }
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Roboto', sans-serif; color: var(--text); background: var(--dark); line-height: 1.6; }
-.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-.top-bar { background: var(--dark); color: white; padding: 8px 0; font-size: 13px; border-bottom: 1px solid var(--primary); }
-.flex-bar { display: flex; justify-content: space-between; }
-.main-nav { background: rgba(0,0,0,0.9); height: 90px; display: flex; align-items: center; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--primary); }
-.flex-nav { display: flex; justify-content: space-between; align-items: center; width: 100%; }
-.logo { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 22px; color: var(--primary); }
-.logo span { color: white; }
-.nav-links { display: flex; list-style: none; }
-.nav-links li { margin-left: 25px; }
-.nav-links a { text-decoration: none; color: white; font-weight: 700; text-transform: uppercase; font-size: 14px; }
-.hero-full { height: 90vh; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://unsplash.com') center/cover; display: flex; align-items: center; text-align: center; color: white; }
-.hero-overlay { width: 100%; }
-.hero-full h1 { font-family: 'Montserrat', sans-serif; font-size: 45px; margin: 15px 0; font-weight: 800; color: var(--primary); }
-.btn-primary { background: var(--primary); color: black; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: 700; margin-right: 15px; display: inline-block; }
-.btn-secondary { border: 2px solid var(--primary); color: var(--primary); padding: 13px 30px; text-decoration: none; border-radius: 5px; font-weight: 700; display: inline-block; }
-.info-strip { background: var(--primary); color: black; padding: 40px 0; margin-top: -50px; position: relative; z-index: 2; border-radius: 5px; font-weight: bold; }
-.grid-stats { display: grid; grid-template-columns: repeat(3, 1fr); text-align: center; }
-.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; padding: 80px 0; align-items: center; }
-.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 50px 0; }
-.about-img img { width: 100%; border-radius: 10px; border: 2px solid var(--primary); }
-.title-center { text-align: center; font-family: 'Montserrat', sans-serif; font-size: 35px; color: var(--primary); margin-bottom: 30px; }
-.card { background: #1a1a1a; padding: 40px; text-align: center; border: 1px solid #333; border-bottom: 4px solid var(--primary); transition: 0.3s; }
-.card i { font-size: 45px; color: var(--primary); margin-bottom: 20px; }
-.card:hover { transform: translateY(-10px); background: #222; border-color: var(--primary); }
-.whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; z-index: 2000; text-decoration: none; box-shadow: 0 0 20px rgba(212, 175, 55, 0.5); }
-footer { background: #050505; color: white; padding: 60px 0 20px; border-top: 1px solid var(--primary); }
-.footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
-.bottom-footer { text-align: center; margin-top: 40px; border-top: 1px solid #222; padding-top: 20px; font-size: 13px; color: #777; }
+:root { --gold: #D4AF37; --black: #0a0a0a; }
+body { margin: 0; background: var(--black); color: white; font-family: 'Poppins', sans-serif; text-align: center; }
+.hero-full { 
+    height: 100vh; 
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+                url('https://unsplash.com') center/cover;
+    display: flex; align-items: center; justify-content: center;
+}
+.diamond-luxury { 
+    width: 60px; height: 60px; background: var(--gold); margin: 0 auto 20px;
+    clip-path: polygon(50% 0%, 100% 35%, 80% 100%, 20% 100%, 0% 35%);
+    animation: rotate 4s infinite linear;
+}
+@keyframes rotate { from { transform: rotateY(0deg); } to { transform: rotateY(360deg); } }
+.btn-gold { background: var(--gold); color: black; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 50px; }
+.card { background: #1a1a1a; padding: 20px; border: 1px solid var(--gold); border-radius: 10px; }
+.card img { width: 100%; border-radius: 5px; margin-bottom: 15px; border-bottom: 2px solid var(--gold); }
