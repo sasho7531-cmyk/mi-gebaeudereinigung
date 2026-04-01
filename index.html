@@ -3,17 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MI Gebäudereinigung | Excellence in Cleaning</title>
+    <title>MI Gebäudereinigung | Meisterbetrieb Neuwied</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Font e Icone -->
     <link href="https://googleapis.com" rel="stylesheet">
     <link rel="stylesheet" href="https://cloudflare.com">
 </head>
 <body>
 
-    <!-- Header & Navigation -->
-    <nav class="navbar">
-        <div class="container-nav">
+    <!-- TOP BAR CONTATTI -->
+    <div class="top-bar">
+        <div class="container flex-bar">
+            <span><i class="fas fa-envelope"></i> info@experts-on-cleaning.de</span>
+            <span><i class="fas fa-phone"></i> 0176 63737254</span>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="main-nav">
+        <div class="container flex-nav">
             <div class="logo">MI <span>GEBÄUDEREINIGUNG</span></div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
@@ -24,96 +31,106 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>REINIGUNGSFIRMA IN NEUWIED</h1>
-            <p>Ihr zuverlässiger Partner für Sauberkeit und Hygiene.</p>
-            <div class="hero-btns">
-                <a href="https://wa.me" class="btn-main">Kostenloses Angebot</a>
-                <a href="#services" class="btn-sub">Unsere Leistungen</a>
+    <!-- HERO SECTION IDENTICA -->
+    <header id="home" class="hero-full">
+        <div class="hero-overlay">
+            <div class="container">
+                <h2 class="sub-title">Willkommen bei MI Gebäudereinigung</h2>
+                <h1>REINIGUNGSFIRMA IN NEUWIED & UMGEBUNG</h1>
+                <p>Professionelle Reinigungslösungen für Privat- und Geschäftskunden. Sauberkeit auf höchstem Niveau.</p>
+                <div class="hero-btns">
+                    <a href="https://wa.me" class="btn-primary">KOSTENLOSE BERATUNG</a>
+                    <a href="#services" class="btn-secondary">UNSERE LEISTUNGEN</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- INFO BOXES (STATISTICHE) -->
+    <section class="info-strip">
+        <div class="container grid-stats">
+            <div class="stat-item"><i class="fas fa-user-check"></i> <h3>100%</h3> <p>Zufriedenheit</p></div>
+            <div class="stat-item"><i class="fas fa-briefcase"></i> <h3>10+</h3> <p>Jahre Erfahrung</p></div>
+            <div class="stat-item"><i class="fas fa-clock"></i> <h3>24/7</h3> <p>Verfügbarkeit</p></div>
+        </div>
+    </section>
+
+    <!-- CHI SIAMO (ABOUT) -->
+    <section id="about" class="about-lux">
+        <div class="container grid-2">
+            <div class="about-img">
+                <img src="https://reinigungsfirma-neuwied.de" alt="Cleaning">
+            </div>
+            <div class="about-text">
+                <span class="tag">Über Uns</span>
+                <h2>Ihr Experten-Team für Glanz & Sauberkeit</h2>
+                <p>Als Meisterbetrieb bieten wir erstklassige Dienstleistungen. Wir verstehen, dass Sauberkeit entscheidend für das Wohlbefinden ist.</p>
+                <ul class="features">
+                    <li><i class="fas fa-check-circle"></i> Pünktlich & Zuverlässig</li>
+                    <li><i class="fas fa-check-circle"></i> Umweltfreundliche Mittel</li>
+                    <li><i class="fas fa-check-circle"></i> Geschultes Fachpersonal</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- Chi Siamo (About) -->
-    <section id="about" class="about-section">
+    <!-- SERVIZI COMPLETI -->
+    <section id="services" class="services-lux">
         <div class="container">
-            <div class="about-grid">
-                <div class="about-text">
-                    <h2>ERFAHRUNG & QUALITÄT</h2>
-                    <p>Wir sind Ihr Experten-Team für erstklassige Reinigungsdienstleistungen. Von der Unterhaltsreinigung bis zur spezialisierten Baureinigung sorgen wir für glänzende Ergebnisse.</p>
-                    <ul class="check-list">
-                        <li><i class="fas fa-check"></i> Professionelles Team</li>
-                        <li><i class="fas fa-check"></i> Modernste Ausrüstung</li>
-                        <li><i class="fas fa-check"></i> 100% Kundenzufriedenheit</li>
-                    </ul>
-                </div>
-                <div class="about-img">
-                    <img src="https://reinigungsfirma-neuwied.de" alt="About Us">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Servizi (Services) -->
-    <section id="services" class="services-section">
-        <div class="container">
-            <h2 class="section-title">UNSERE LEISTUNGEN</h2>
-            <div class="services-grid">
-                <div class="service-box">
+            <h2 class="title-center">Unsere Dienstleistungen</h2>
+            <div class="grid-3">
+                <div class="card">
                     <i class="fas fa-building"></i>
                     <h3>Büroreinigung</h3>
-                    <p>Tägliche oder wöchentliche Pflege Ihrer Geschäftsräume.</p>
+                    <p>Unterhaltsreinigung für ein perfektes Arbeitsumfeld.</p>
                 </div>
-                <div class="service-box">
-                    <i class="fas fa-shimmer"></i>
+                <div class="card">
+                    <i class="fas fa-window-restore"></i>
                     <h3>Glasreinigung</h3>
-                    <p>Streifenfreie Sauberkeit für Fenster und Fassaden.</p>
+                    <p>Streifenfreie Sauberkeit für alle Glasflächen.</p>
                 </div>
-                <div class="service-box">
-                    <i class="fas fa-hard-hat"></i>
+                <div class="card">
+                    <i class="fas fa-broom"></i>
                     <h3>Baureinigung</h3>
-                    <p>Gründliche Reinigung nach Bau- oder Renovierungsarbeiten.</p>
+                    <p>Endreinigung nach Bau- oder Sanierungsphasen.</p>
                 </div>
-                <div class="service-box">
+                <div class="card">
                     <i class="fas fa-home"></i>
-                    <h3>Unterhaltsreinigung</h3>
-                    <p>Werterhalt Ihrer Immobilie durch regelmäßige Pflege.</p>
+                    <h3>Privathaushalte</h3>
+                    <p>Individuelle Reinigung für Ihr Zuhause.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-tools"></i>
+                    <h3>Sonderreinigung</h3>
+                    <p>Spezielle Lösungen für hartnäckigen Schmutz.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Desinfektion</h3>
+                    <p>Hygienische Sauberkeit nach höchsten Standards.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contatti -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2>KONTAKT</h2>
-            <div class="contact-cards">
-                <div class="c-card">
-                    <i class="fas fa-phone"></i>
-                    <p>0176 63737254</p>
-                </div>
-                <div class="c-card">
-                    <i class="fas fa-envelope"></i>
-                    <p>info@experts-on-cleaning.de</p>
-                </div>
-                <div class="c-card">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>Rheinstraße 133, 56564 Neuwied</p>
-                </div>
+    <!-- FOOTER -->
+    <footer id="contact">
+        <div class="container footer-grid">
+            <div class="footer-box">
+                <h3>MI GEBÄUDEREINIGUNG</h3>
+                <p>Ihr Profi in Neuwied.</p>
+            </div>
+            <div class="footer-box">
+                <h3>Kontakt</h3>
+                <p>Rheinstraße 133, 56564 Neuwied</p>
+                <p>Tel: 0176 63737254</p>
             </div>
         </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 MI GEBÄUDEREINIGUNG - Alle Rechte vorbehalten.</p>
+        <div class="bottom-footer"><p>&copy; 2024 MI GEBÄUDEREINIGUNG</p></div>
     </footer>
 
-    <!-- Tasto WhatsApp Fisso -->
-    <a href="https://wa.me" class="whatsapp-fixed" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <!-- WHATSAPP FLOATING -->
+    <a href="https://wa.me" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
 </body>
 </html>
