@@ -3,58 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MI Gebäudereinigung | Excellence in Cleaning</title>
+    <title>MI Gebäudereinigung | Premium Service</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Font elegante -->
     <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="https://cloudflare.com">
 </head>
 <body>
 
-    <nav>
-        <div class="logo">MI GEBÄUDEREINIGUNG</div>
+    <nav class="navbar">
+        <div class="logo">MI <span>GEBÄUDEREINIGUNG</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Leistungen</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
     </nav>
 
-    <header class="hero">
+    <header id="home" class="hero">
         <div class="hero-content">
-            <!-- Il Diamante Animato -->
-            <div class="diamond-container">
-                <div class="diamond"></div>
+            <div class="diamond-box">
+                <div class="diamond-luxury"></div>
             </div>
-            <h1>Premium Reinigungsservice</h1>
-            <p>Glanz e Perfektion für Ihre Räumlichkeiten</p>
-            <a href="#contact" class="btn-gold">JETZT ANFRAGEN</a>
+            <h1>Premium Reinigung</h1>
+            <p>Ihr Partner für exzellente Sauberkeit in Neuwied</p>
+            <div class="cta-group">
+                <!-- Collegamento WhatsApp aggiornato -->
+                <a href="https://wa.me" target="_blank" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Chat
+                </a>
+            </div>
         </div>
     </header>
 
-    <section id="services">
-        <h2 class="section-title">Unsere Exklusiven Leistungen</h2>
+    <section id="services" class="services">
+        <h2 class="section-title">Unsere Leistungen</h2>
         <div class="service-grid">
             <div class="service-card">
+                <i class="fas fa-building gold-icon"></i>
                 <h3>Büroreinigung</h3>
-                <p>Professionelle Pflege für ein motivierendes Arbeitsumfeld.</p>
+                <p>Professionelle Unterhaltsreinigung per Ihre Geschäftsräume.</p>
             </div>
             <div class="service-card">
+                <i class="fas fa-window-maximize gold-icon"></i>
                 <h3>Glasreinigung</h3>
-                <p>Kristallklare Sicht durch spezialisierte Reinigungstechniken.</p>
+                <p>Kristallklare Fenster und Glasfassaden.</p>
             </div>
             <div class="service-card">
-                <h3>Unterhaltsreinigung</h3>
-                <p>Kontinuierliche Sauberkeit auf höchstem Niveau.</p>
+                <i class="fas fa-house-chimney gold-icon"></i>
+                <h3>Fassadenreinigung</h3>
+                <p>Werterhalt und Schutz für Ihre Immobilie.</p>
             </div>
         </div>
     </section>
 
-    <section id="contact">
-        <h2 class="section-title">Kontakt</h2>
-        <div class="contact-info">
-            <p><strong>Telefon:</strong> [DEIN NUMERO]</p>
-            <p><strong>Email:</strong> [DEINE EMAIL]</p>
-            <p><strong>Standort:</strong> Neuwied & Umgebung</p>
+    <section id="contact" class="contact">
+        <h2 class="section-title">Kontaktieren Sie uns</h2>
+        <div class="contact-details">
+            <!-- Numero di telefono aggiornato -->
+            <p><i class="fas fa-phone gold-icon"></i> <strong>Tel:</strong> 0176 63737254</p>
+            <p><i class="fas fa-envelope gold-icon"></i> <strong>Email:</strong> info@cleanoffice-neuwied.de</p>
+            <p><i class="fas fa-map-marker-alt gold-icon"></i> <strong>Standort:</strong> Rheinstraße 133, 56564 Neuwied</p>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 MI Gebäudereinigung. All Rights Reserved.</p>
+        <p>&copy; 2024 MI GEBÄUDEREINIGUNG - Luxury Cleaning Services</p>
     </footer>
 
 </body>
